@@ -1,0 +1,16 @@
+# Node modules (very large, auto-generated)
+node_modules/
+
+# Cypress videos & screenshots (test artifacts)
+cypress/videos/
+cypress/screenshots/
+
+# Logs
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables (sensitive data)
+.env
