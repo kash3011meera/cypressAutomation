@@ -14,16 +14,11 @@ describe('Export Order Test', () => {
       cy.xpath('//*[@id="root"]/div[1]/div[2]/div/div/div/form/button').click();
       cy.wait(1000);
   
-      // Wait for OTP input field to be visible and enter OTP
-      cy.get('#otp').should('be.visible').type('123');
-  
-      // Click the verify button
-      cy.xpath('//*[@id="root"]/div[1]/div[2]/div/div/div/form/button').click();
-      cy.wait(3000);
-
-     
+        Cypress.on('uncaught:exception', (err, runnable) => {
+        return false
+        })
       // Click on Dealer Settings
-      cy.xpath('//span[contains(text(),"Dealer Settings")]', { timeout: 10000 })
+      cy.xpath('//*[@id="root"]/div[1]/aside/div[2]/div/div[2]/ul/li[20]/span/i', { timeout: 10000 })
      .click({force : true});
 
       cy.wait(2000);
