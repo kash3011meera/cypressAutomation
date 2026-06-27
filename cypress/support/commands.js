@@ -23,13 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-Cypress.Commands.add('login', (username, password, otp) => {
+    Cypress.Commands.add('login', (username, password) => {
     cy.visit('https://dev-autoport.dealerimagepro.com/auth/login');
-    cy.get('#username').type(username);
-    cy.get('#password').type(password);
-    cy.xpath('//*[@id="root"]/div[1]/div[2]/div/div/div/form/button').click();
+    cy.get('#username').type("kashmeera.kadachhi@eryushion.com");
+    cy.get('#password').type("Ka@shu3011");
+    cy.xpath('//*[@id="root"]/div[1]/div[2]/div/div/div/div[2]/form/button').click();
   
     // Wait for OTP input field to be visible and enter OTP
-    cy.get('#otp').should('be.visible').type(otp);
-    cy.xpath('//*[@id="root"]/div[1]/div[2]/div/div/div/form/button').click();
+   // cy.get('#otp').should('be.visible').type(otp);
+    //cy.xpath('//*[@id="root"]/div[1]/div[2]/div/div/div/form/button').click();
   });
